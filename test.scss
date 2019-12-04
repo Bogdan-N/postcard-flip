@@ -1,0 +1,106 @@
+/** sass/scss/less code */
+.cardWrapper {
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+
+  .secondPart {
+    background-color: #dbb2f9;
+    width: 400px;
+    height: 200px;
+  }
+
+  .flipCard {
+    -webkit-perspective: 1200;
+    -ms-perspective: 1200;
+    -moz-perspective: 1200;
+    -o-perspective: 1200;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+
+    .card {
+      // width: 100%;
+      // height: 100%;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: 1.5s;
+      -moz-transform-style: preserve-3d;
+      -moz-transition: 1.5s;
+      -ms-transform-style: preserve-3d;
+      -ms-transition: 1.5s;
+      -o-transform-style: preserve-3d;
+      -o-transition: 1.5s;
+      transform-style: preserve-3d;
+      transform-origin: top left;
+      transition: 1.5s;
+
+      &.flipped {
+        transform: rotatey(-180deg);
+        -ms-transform: rotatey(-180deg);
+        /* IE 9 */
+        -moz-transform: rotatey(-180deg);
+        /* Firefox */
+        -webkit-transform: rotatey(-180deg);
+        /* Safari and Chrome */
+        -o-transform: rotatey(-180deg);
+        /* Opera */
+      }
+
+      .side {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        box-sizing: border-box;
+        z-index: 2;
+        backface-visibility: hidden;
+        /* W3C */
+        -webkit-backface-visibility: hidden;
+        /* Safari & Chrome */
+        -moz-backface-visibility: hidden;
+        /* Firefox */
+        -ms-backface-visibility: hidden;
+        /* Internet Explorer */
+        -o-backface-visibility: hidden;
+        /* Opera */
+        /* box-shadow: 0 0 10px rgba(0,0,0,0.6); */
+        overflow: auto;
+      }
+
+      .back {
+        background-color: #dbb2f9;
+        text-align: center;
+        padding-top: 50px;
+        font-family: Georgia;
+        font-size: 2em;
+        color: black;
+        transform: rotatey(-180deg);
+        -ms-transform: rotatey(-180deg);
+        /* IE 9 */
+        -moz-transform: rotatey(-180deg);
+        /* Firefox */
+        -webkit-transform: rotatey(-180deg);
+        /* Safari and Chrome */
+        -o-transform: rotatey(-180deg);
+        /* Opera */
+      }
+
+      .front {
+        font-family: Georgia;
+        font-size: 3em;
+        text-align: center;
+        line-height: 160px;
+        background-image: url('./merry.png');
+        color: white;
+
+        img {    
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}
