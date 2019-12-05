@@ -21,6 +21,115 @@ body,
   content: "\2744";
 }
 
+.card-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cardWrapper {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.cardWrapper .secondPart {
+  width: 400px;
+ 
+}
+
+.cardWrapper .flipCard {
+  -webkit-perspective: 1200;
+  -ms-perspective: 1200;
+  -moz-perspective: 1200;
+  -o-perspective: 1200;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+}
+
+.cardWrapper .flipCard .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 1.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 1.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 1.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 1.5s;
+  transform-style: preserve-3d;
+  transform-origin: top left;
+  transition: 1.5s;
+}
+
+.cardWrapper .flipCard .card.flipped {
+  transform: rotatey(-180deg);
+  -ms-transform: rotatey(-180deg);
+  /* IE 9 */
+  -moz-transform: rotatey(-180deg);
+  /* Firefox */
+  -webkit-transform: rotatey(-180deg);
+  /* Safari and Chrome */
+  -o-transform: rotatey(-180deg);
+  /* Opera */
+}
+
+.cardWrapper .flipCard .card .side {
+  cursor: pointer;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+  backface-visibility: hidden;
+  /* W3C */
+  -webkit-backface-visibility: hidden;
+  /* Safari & Chrome */
+  -moz-backface-visibility: hidden;
+  /* Firefox */
+  -ms-backface-visibility: hidden;
+  /* Internet Explorer */
+  -o-backface-visibility: hidden;
+  /* Opera */
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.6); */
+  overflow: auto;
+}
+
+.cardWrapper .flipCard .card .back {
+  text-align: center;
+  font-family: Georgia;
+  color: black;
+  transform: rotatey(-180deg);
+  -ms-transform: rotatey(-180deg);
+  /* IE 9 */
+  -moz-transform: rotatey(-180deg);
+  /* Firefox */
+  -webkit-transform: rotatey(-180deg);
+  /* Safari and Chrome */
+  -o-transform: rotatey(-180deg);
+  /* Opera */
+}
+
+.cardWrapper .flipCard .card .front {
+  font-family: Georgia;
+  font-size: 3em;
+  text-align: center;
+  line-height: 160px;
+  background-attachment: fixed;  
+  background-size: cover;
+  color: white;
+}
+
+
+
+
+
+
+
+
 .snowflake:nth-of-type(1) {
   animation-name: snowflake-1;
   animation-delay: 17s;
@@ -6460,103 +6569,3 @@ body,
       opacity: 0;
   }
 }
-
-
-
-.cardWrapper {
-  margin-top: 50px;
-  text-align: center;
-  justify-content: center;
-}
-
-.cardWrapper.active {
-  /* padding-left: 25%; */
-}
-
-.cardWrapper .secondPart {
-  width: 400px;
-  /* height: 200px; */
-}
-
-.cardWrapper .flipCard {
-  -webkit-perspective: 1200;
-  -ms-perspective: 1200;
-  -moz-perspective: 1200;
-  -o-perspective: 1200;
-  width: 400px;
-  height: 200px;
-  position: absolute;
-}
-
-.cardWrapper .flipCard .card {
-  width: 100%;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: 1.5s;
-  -moz-transform-style: preserve-3d;
-  -moz-transition: 1.5s;
-  -ms-transform-style: preserve-3d;
-  -ms-transition: 1.5s;
-  -o-transform-style: preserve-3d;
-  -o-transition: 1.5s;
-  transform-style: preserve-3d;
-  transform-origin: top left;
-  transition: 1.5s;
-}
-
-.cardWrapper .flipCard .card.flipped {
-  transform: rotatey(-180deg);
-  -ms-transform: rotatey(-180deg);
-  /* IE 9 */
-  -moz-transform: rotatey(-180deg);
-  /* Firefox */
-  -webkit-transform: rotatey(-180deg);
-  /* Safari and Chrome */
-  -o-transform: rotatey(-180deg);
-  /* Opera */
-}
-
-.cardWrapper .flipCard .card .side {
-  cursor: pointer;
-  position: absolute;
-  box-sizing: border-box;
-  z-index: 2;
-  backface-visibility: hidden;
-  /* W3C */
-  -webkit-backface-visibility: hidden;
-  /* Safari & Chrome */
-  -moz-backface-visibility: hidden;
-  /* Firefox */
-  -ms-backface-visibility: hidden;
-  /* Internet Explorer */
-  -o-backface-visibility: hidden;
-  /* Opera */
-  /* box-shadow: 0 0 10px rgba(0,0,0,0.6); */
-  overflow: auto;
-}
-
-.cardWrapper .flipCard .card .back {
-  text-align: center;
-  font-family: Georgia;
-  color: black;
-  transform: rotatey(-180deg);
-  -ms-transform: rotatey(-180deg);
-  /* IE 9 */
-  -moz-transform: rotatey(-180deg);
-  /* Firefox */
-  -webkit-transform: rotatey(-180deg);
-  /* Safari and Chrome */
-  -o-transform: rotatey(-180deg);
-  /* Opera */
-}
-
-.cardWrapper .flipCard .card .front {
-  font-family: Georgia;
-  font-size: 3em;
-  text-align: center;
-  line-height: 160px;
-  background-attachment: fixed;  
-  background-size: cover;
-  color: white;
-}
-
