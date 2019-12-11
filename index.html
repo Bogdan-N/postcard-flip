@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./script.js"></script>
   </head>
 
   <body>
@@ -177,9 +178,9 @@
         </a>
     </div>
     <div class="card-content">
-      <div class="cardWrapper" onclick="this.classList.toggle('active');">
-          <div class="flipCard">
-            <div class="card" onclick="this.classList.toggle('flipped');">
+      <div class="cardWrapper" id="cardWrapper">
+          <div class="flipCard" id="cardFront">
+            <div class="card">
               <div class="side front">
                 <img style="width: 30vw; height: 32vw;" src="./postcard-face.png" alt="">
               </div>
