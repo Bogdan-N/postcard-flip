@@ -1,6 +1,4 @@
 /** sass/scss/less code */
-html,
-body,
 .snowfall {
   /* background: url('./assets/background.jpg') no-repeat center center fixed; */
   background-color: #6E535342;
@@ -20,14 +18,20 @@ body,
   right: 30px;
 }
 
-.sound-icon.muted::after {
+.img-wrapper.muted::after {
+  display: inline-block;
   content: '';
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
+  height: 1px;
+  width: 67px;
+  position: absolute;
+  border-top: 3px solid black;
+  top: 43px;
+  transform: rotate(-26deg);
+  right: 19px;
 }
 
 body {
+  background-color: #6E535342;
   margin: 0;
 }
 

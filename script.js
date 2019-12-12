@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var wrapper = document.getElementById('cardWrapper');
   var card = document.getElementsByClassName('card')[0];
   var music = document.getElementById("myAudio");
+  var stopped = false;
 
-  frontCard.addEventListener("click", function () {
-    wrapper.classList.add("active");
+  frontCard.addEventListener("click", function (event) {
+     wrapper.classList.add("active");
     card.classList.add("flipped");
-    music.play();
+    if (!stopped) {
+      music.play();
+    }
   });
 
   var backCard = document.getElementsByClassName('back')[0];
@@ -18,11 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
     card.classList.remove("flipped");
   });
 
+  var soundImgWrapper = document.getElementsByClassName('img-wrapper')[0];
   var soundButton = document.getElementById('soundButton');
-  
-  console.log('soundButton', soundButton);
+
   soundButton.addEventListener("click", function (event) {
-    console.log('sound button');
-    music.muted = !music.muted;
+    if (stopped) {
+      music.play();
+      soundImgWrapper.classList.remove("muted");
+    } else {
+      music.pause();
+      soundImgWrapper.classList.add("muted");
+    }
+    stopped = !stopped;
   });
 });
