@@ -1,7 +1,14 @@
 /** sass/scss/less code */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(110, 83, 83, 0.259);
+  margin: 0;
+}
 .snowfall {
   /* background: url('./assets/background.jpg') no-repeat center center fixed; */
-  background-color: #6E535342;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,6 +16,18 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+}
+
+.snowflake {
+  position: absolute;
+  /* color: white; */
+  z-index: 99;
+}
+
+.snowflake:after {
+  content: "\2744";
+  color: transparent;
+  text-shadow: 0 0 0 white;
 }
 
 .sound-icon {
@@ -28,21 +47,6 @@
   top: 43px;
   transform: rotate(-26deg);
   right: 19px;
-}
-
-body {
-  background-color: #6E535342;
-  margin: 0;
-}
-
-.snowflake {
-  position: absolute;
-  color: white;
-  z-index: 99;
-}
-
-.snowflake:after {
-  content: "\2744";
 }
 
 .card-content {
@@ -72,10 +76,11 @@ body {
 }
 
 .cardWrapper .flipCard {
-  -webkit-perspective: 1200;
-  -ms-perspective: 1200;
-  -moz-perspective: 1200;
-  -o-perspective: 1200;
+  perspective: 2000px;
+  -webkit-perspective: 2000px;
+  -ms-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -o-perspective: 2000px;
   width: 400px;
   height: 32vw;
   position: absolute;
@@ -110,6 +115,10 @@ body {
   /* Opera */
 }
 
+/* .cardWrapper .flipCard .card.flipped .side.back {
+  -ms-backface-visibility: visible !important;
+} */
+
 .cardWrapper .flipCard .card .side {
   cursor: pointer;
   position: absolute;
@@ -120,9 +129,9 @@ body {
   -webkit-backface-visibility: hidden;
   /* Safari & Chrome */
   -moz-backface-visibility: hidden;
-  /* Firefox */
+
   -ms-backface-visibility: hidden;
-  /* Internet Explorer */
+  /* Firefox */
   -o-backface-visibility: hidden;
   /* Opera */
   /* box-shadow: 0 0 10px rgba(0,0,0,0.6); */
@@ -6205,406 +6214,6 @@ body {
   100% {
       transform: rotate(360deg);
       top: 96%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(152) {
-  animation-name: snowflake-152;
-  animation-delay: 7s;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  left: 40%;
-  top: -66%;
-}
-
-.snowflake:nth-of-type(152):after {
-  font-size: 11px;
-}
-
-@Keyframes snowflake-152 {
-  0% {
-      transform: rotate(0deg);
-      left: 40%;
-      top: -66%;
-  }
-
-  25% {
-      left: 41%;
-  }
-
-  50% {
-      left: 40%;
-  }
-
-  75% {
-      left: 42%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 106%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(153) {
-  animation-name: snowflake-153;
-  animation-delay: 6s;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  left: 12%;
-  top: -87%;
-}
-
-.snowflake:nth-of-type(153):after {
-  font-size: 20px;
-}
-
-@Keyframes snowflake-153 {
-  0% {
-      transform: rotate(0deg);
-      left: 12%;
-      top: -87%;
-  }
-
-  25% {
-      left: 13%;
-  }
-
-  50% {
-      left: 12%;
-  }
-
-  75% {
-      left: 14%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 127%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(154) {
-  animation-name: snowflake-154;
-  animation-delay: 4s;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  left: 29%;
-  top: -67%;
-}
-
-.snowflake:nth-of-type(154):after {
-  font-size: 22px;
-}
-
-@Keyframes snowflake-154 {
-  0% {
-      transform: rotate(0deg);
-      left: 29%;
-      top: -67%;
-  }
-
-  25% {
-      left: 30%;
-  }
-
-  50% {
-      left: 29%;
-  }
-
-  75% {
-      left: 31%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 107%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(155) {
-  animation-name: snowflake-155;
-  animation-delay: 16s;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
-  left: 54%;
-  top: -86%;
-}
-
-.snowflake:nth-of-type(155):after {
-  font-size: 9px;
-}
-
-@Keyframes snowflake-155 {
-  0% {
-      transform: rotate(0deg);
-      left: 54%;
-      top: -86%;
-  }
-
-  25% {
-      left: 55%;
-  }
-
-  50% {
-      left: 54%;
-  }
-
-  75% {
-      left: 56%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 126%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(156) {
-  animation-name: snowflake-156;
-  animation-delay: 3s;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  left: 33%;
-  top: -62%;
-}
-
-.snowflake:nth-of-type(156):after {
-  font-size: 4px;
-}
-
-@Keyframes snowflake-156 {
-  0% {
-      transform: rotate(0deg);
-      left: 33%;
-      top: -62%;
-  }
-
-  25% {
-      left: 34%;
-  }
-
-  50% {
-      left: 33%;
-  }
-
-  75% {
-      left: 35%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 102%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(157) {
-  animation-name: snowflake-157;
-  animation-delay: 0s;
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-  left: 14%;
-  top: -87%;
-}
-
-.snowflake:nth-of-type(157):after {
-  font-size: 4px;
-}
-
-@Keyframes snowflake-157 {
-  0% {
-      transform: rotate(0deg);
-      left: 14%;
-      top: -87%;
-  }
-
-  25% {
-      left: 15%;
-  }
-
-  50% {
-      left: 14%;
-  }
-
-  75% {
-      left: 16%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 127%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(158) {
-  animation-name: snowflake-158;
-  animation-delay: 13s;
-  animation-duration: 7s;
-  animation-iteration-count: infinite;
-  left: 99%;
-  top: -75%;
-}
-
-.snowflake:nth-of-type(158):after {
-  font-size: 18px;
-}
-
-@Keyframes snowflake-158 {
-  0% {
-      transform: rotate(0deg);
-      left: 99%;
-      top: -75%;
-  }
-
-  25% {
-      left: 100%;
-  }
-
-  50% {
-      left: 99%;
-  }
-
-  75% {
-      left: 101%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 115%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(159) {
-  animation-name: snowflake-159;
-  animation-delay: 13s;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  left: 76%;
-  top: -88%;
-}
-
-.snowflake:nth-of-type(159):after {
-  font-size: 17px;
-}
-
-@Keyframes snowflake-159 {
-  0% {
-      transform: rotate(0deg);
-      left: 76%;
-      top: -88%;
-  }
-
-  25% {
-      left: 77%;
-  }
-
-  50% {
-      left: 76%;
-  }
-
-  75% {
-      left: 78%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 128%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(160) {
-  animation-name: snowflake-160;
-  animation-delay: 14s;
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-  left: 96%;
-  top: -69%;
-}
-
-.snowflake:nth-of-type(160):after {
-  font-size: 16px;
-}
-
-@Keyframes snowflake-160 {
-  0% {
-      transform: rotate(0deg);
-      left: 96%;
-      top: -69%;
-  }
-
-  25% {
-      left: 97%;
-  }
-
-  50% {
-      left: 96%;
-  }
-
-  75% {
-      left: 98%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 109%;
-      opacity: 0;
-  }
-}
-
-.snowflake:nth-of-type(161) {
-  animation-name: snowflake-161;
-  animation-delay: 5s;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  left: 15%;
-  top: -92%;
-}
-
-.snowflake:nth-of-type(161):after {
-  font-size: 4px;
-}
-
-@Keyframes snowflake-161 {
-  0% {
-      transform: rotate(0deg);
-      left: 15%;
-      top: -92%;
-  }
-
-  25% {
-      left: 16%;
-  }
-
-  50% {
-      left: 15%;
-  }
-
-  75% {
-      left: 17%;
-      opacity: 1;
-  }
-
-  100% {
-      transform: rotate(360deg);
-      top: 132%;
       opacity: 0;
   }
 }
