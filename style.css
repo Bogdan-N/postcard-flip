@@ -2,7 +2,8 @@
 html,
 body,
 .snowfall {
-  background: url('./background.jpg') no-repeat center center fixed;
+  /* background: url('./assets/background.jpg') no-repeat center center fixed; */
+  background-color: #6E535342;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,9 +13,28 @@ body,
   height: 100%;
 }
 
+.sound-icon {
+  position: absolute;
+  height: 45px;
+  top: 23px;
+  right: 30px;
+}
+
+.sound-icon.muted::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+body {
+  margin: 0;
+}
+
 .snowflake {
   position: absolute;
   color: white;
+  z-index: 99;
 }
 
 .snowflake:after {
@@ -55,6 +75,7 @@ body,
   width: 400px;
   height: 32vw;
   position: absolute;
+  left: 1px;
 }
 
 .cardWrapper .flipCard .card {
